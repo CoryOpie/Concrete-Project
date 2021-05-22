@@ -83,7 +83,15 @@ def send():
         custfinalpredict = model.predict(custinputscaled)
         print(custfinalpredict[0][0])
 
+
     return render_template("index.html", predictions = custfinalpredict[0][0])
+    if predictions > 80:
+      predictions = f"<span style= 'color:green;'>{predictions}</span>"
+    elif predictions >40:
+      predictions = f"<span style= 'color:yellow;'>{predictions}</span>"
+    else:
+      predictions = f"<span style= 'color:red;'>{predictions}</span>"
+    print(predictions)
 
 
 if __name__ == "__main__":
