@@ -58,14 +58,38 @@ def send():
 
     if request.method == "POST":
         print(request.form)
-        cement = request.form["Cement"]
-        blastfurnaceslag = request.form["BlastFurnaceSlag"]
-        flyash = request.form["FlyAsh"]
-        water = request.form["Water"]
-        superplasticizer = request.form["Superplasticizer"]
-        coarseaggregate = request.form["CoarseAggregate"]
-        fineaggregate = request.form["FineAggregate"]
-        age = request.form["Age"]
+        if request.form["Cement"]:
+          cement = request.form["Cement"]
+        else:
+          cement = 0
+        if request.form["BlastFurnaceSlag"]:
+          blastfurnaceslag = request.form["BlastFurnaceSlag"]
+        else:
+          blastfurnaceslag = 0
+        if request.form["FlyAsh"]:
+          flyash = request.form["FlyAsh"]
+        else:
+          flyash = 0
+        if request.form["Water"]:
+          water = request.form["Water"]
+        else:
+          water = 0
+        if request.form["Superplasticizer"]:
+          superplasticizer = request.form["Superplasticizer"]
+        else:
+          superplasticizer = 0
+        if request.form["CoarseAggregate"]:
+          coarseaggregate = request.form["CoarseAggregate"]
+        else:
+          coarseaggregate = 0
+        if request.form["FineAggregate"]:
+          fineaggregate = request.form["FineAggregate"]
+        else:
+          fineaggregate = 0
+        if request.form["Age"]:
+          age = request.form["Age"]
+        else:
+          age = 1
         
         
         custinput = [[cement, blastfurnaceslag, flyash, water, superplasticizer, coarseaggregate, fineaggregate, age]]
@@ -84,15 +108,31 @@ def send():
         print(custfinalpredict[0][0])
 
 
-    return render_template("index.html", predictions = custfinalpredict[0][0])
-    if predictions > 80:
-      predictions = f"<span style= 'color:green;'>{predictions}</span>"
-    elif predictions >40:
-      predictions = f"<span style= 'color:yellow;'>{predictions}</span>"
-    else:
-      predictions = f"<span style= 'color:red;'>{predictions}</span>"
-    print(predictions)
+        predictions = round(custfinalpredict[0][0],2)
 
+        predictionshigh = None
+        predictionscommercial = None
+        predictionsresidential = None
+        predictionsfail = None
+
+        if predictions > 70:
+              predictionshigh = predictions
+        elif predictions > 28:
+              predictionscommercial = predictions
+        elif predictions > 17:
+              predictionsresidential = predictions
+        else:
+              predictionsfail = predictions
+        # if predictions > 80:
+        #   predictions = f'<span style= "color:green;">{predictions}</span>'
+        # elif predictions >40:
+        #   predictions = f'<span style= "color:yellow;">{predictions}</span>'
+        # else:
+        #   predictions = f'<span style= "color:red;">{predictions}</span>'
+
+
+    print(predictions)
+    return render_template("index.html", predictionshigh = predictionshigh, predictionsresidential = predictionsresidential, predictionscommercial = predictionscommercial, predictionsfail = predictionsfail)
 
 if __name__ == "__main__":
     app.run()
