@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+<head><meta charset="UTF-8">
+  <title>Concrete: Quality in Question</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <link href="style.css" rel="stylesheet">
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white; background-color: #606060; font-size: 30px; text-align: left;" href="index.html">
+    <img class="header" src="../images/Concrete.gif" alt="">
+    <strong>Concrete: Quality in Question</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" style="color: #606060; font-size: 20px;" aria-current="page" href="index.html">
+          <strong>Home</strong></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: #606060; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong>Visualizations</strong></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="price.html">
+            <strong>Concrete Price per Ton</strong></a></li>
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="tons.html">
+            <strong>Concrete Production by Country</strong></a></li>
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="production.html">
+            <strong>Concrete Price and Production</strong></a></li>            
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="locations.html">
+            <strong>Concrete Locations</strong></a></li>
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="correlation.html">
+            <strong>Correlation Matrix</strong></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: #606060; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong>About</strong></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="concrete.html">
+            <strong>Components</strong></a></li>
+            <li><a class="dropdown-item" style="color: #606060; font-size: 16px;" href="strength.html">
+            <strong>Age and Strength</strong></a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"  style="color: #606060; font-size: 20px;" href="data.html">
+          <strong>Data</strong></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <iframe src="https://public.tableau.com/views/Cement2/PriceTon?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link&:showVizHome=no&:embed=true" width="645" height="955"></iframe>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-3">
+    <h3>Concrete Price per Ton</h3>
+    <hr>
+    <p>
+    The cost of concrete continues to rise. The most expensive ingredient in concrete is the cement. 
+    You can minimize the amount of cement needed by using aggregates. 
+    There are limits on the amount of additives you can use because low surface area typically means low strength.
+    </P>
+    </div>
+
+
+  </div>
+
+</div>
+</body>
+</html>
