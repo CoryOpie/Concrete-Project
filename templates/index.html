@@ -22,7 +22,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" style="color: white; background-color: #606060; font-size: 30px; text-align: left;" href="/">
-    <img class="header" src="../images/Concrete.gif" alt="">
+    <!-- <img class="header" src="../images/Concrete.gif" alt=""> -->
+      <img class="header" src="{{url_for('static', filename='Concrete.gif')}}" alt="" Width = 150 Height = 150>
+    
     <strong>Concrete: Quality in Question</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -122,16 +124,16 @@
       <div id="myDiv" style="float: left">
        </div>
       {%if predictionshigh%}
-      <strong><h4 style= "color: rgb(4, 73, 4)"> Your Concrete Strength is: {{predictionshigh}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(11, 14, 218)">{{predictionshigh}}(MPa)</h4></strong>
       {%endif%}
       {%if predictionscommercial%}
-      <strong><h4 style= "color: rgb(5, 141, 66)"> Your Concrete Strength is: {{predictionscommercial}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(5, 141, 66)">{{predictionscommercial}}(MPa)</h4></strong>
       {%endif%}
        {%if predictionsresidential%}
-      <strong><h4 style= "color: rgb(81, 255, 0)"> Your Concrete Strength is: {{predictionsresidential}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(81, 255, 0)">{{predictionsresidential}}(MPa)</h4></strong>
       {%endif%}
       {%if predictionsfail%}
-      <strong><h4 style= "color: red"> Your Concrete Strength is: {{predictionsfail}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete Strength(MPa) is: </h3> <h4 style= "color: red">{{predictionsfail}}(MPa)</h4></strong>
       {%endif%}
     </div>
 
@@ -161,7 +163,7 @@
             <td>Commercial</td>
           </tr>
           <tr>
-            <td style= "color: rgb(4, 73, 4)">70+ (MPa)</td>
+            <td style= "color: rgb(11, 14, 218)">70+ (MPa)</td>
             <td>High Strength</td>
           </tr>
         </tbody>
