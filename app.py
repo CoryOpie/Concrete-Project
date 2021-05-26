@@ -1,10 +1,8 @@
 # import necessary libraries
 # from models import create_classes
-import os
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 from sqlalchemy.ext.automap import automap_base
-import pandas as pd
 import joblib
 
 from flask import (
