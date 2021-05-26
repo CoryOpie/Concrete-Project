@@ -134,5 +134,85 @@ def send():
     print(predictions)
     return render_template("index.html", predictionshigh = predictionshigh, predictionsresidential = predictionsresidential, predictionscommercial = predictionscommercial, predictionsfail = predictionsfail)
 
+
+
+@app.route("/ash")
+def ash_page():
+
+  return render_template("ash.html")
+
+@app.route("/cement")
+def cement_page():
+
+  return render_template("cement.html")
+
+@app.route("/coarse")
+def coarse_page():
+
+  return render_template("coarse.html")
+
+@app.route("/concrete")
+def concrete_page():
+
+  return render_template("concrete.html")
+
+
+@app.route("/correlation")
+def corr_page():
+
+  return render_template("correlation.html")
+
+@app.route("/data")
+def data_page():
+
+  return render_template("data.html")
+
+@app.route("/fine")
+def fine_page():
+
+  return render_template("fine.html")
+
+@app.route("/locations")
+def locations_page():
+
+  return render_template("locations.html")
+
+@app.route("/price")
+def price_page():
+
+  return render_template("price.html")
+
+@app.route("/production")
+def production_page():
+
+  return render_template("production.html")
+
+
+@app.route("/slag")
+def slag_page():
+
+  return render_template("slag.html")
+
+@app.route("/strength")
+def strength_page():
+
+  return render_template("strength.html")
+
+@app.route("/superplasticizer")
+def super_page():
+
+  return render_template("superplasticizer.html")
+
+@app.route("/tons")
+def tons_page():
+
+  return render_template("tons.html")
+
+@app.route("/water")
+def water_page():
+
+  return render_template("water.html")
+
+
 if __name__ == "__main__":
     app.run()
