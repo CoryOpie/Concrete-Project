@@ -23,7 +23,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" style="color: white; background-color: #606060; font-size: 30px; text-align: left;" href="/">
     <!-- <img class="header" src="../images/Concrete.gif" alt=""> -->
-      <img class="header" src="{{url_for('static', filename='Concrete.gif')}}" alt="" Width = 150 Height = 150>
+      <img class="header" src="{{url_for('static', filename='Concrete.gif')}}" alt="" Width = 150 Height = 100>
     
     <strong>Concrete: Quality in Question</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,36 +81,36 @@
     <div class="col-md-3">
       <form method="POST" action="/predict" role="form", name="concreteform">
         <div class="form-group">
-          <label for="inputCement">Cement</label>
-          <input type="text" class="form-control" id="inputCement" name="Cement" placeholder="Default is 0">
+          <label for="inputCement">Cement (102-540 kg / m^3) or (6-15%)</label>
+          <input type="text" class="form-control" id="inputCement" name="Cement" placeholder="380">
         </div>
         <div class="form-group">
-          <label for="inputBlastFurnaceSlag">Blast Furnace Slag</label>
-          <input type="text" class="form-control" id="inputBlastFurnaceSlag" name="BlastFurnaceSlag" placeholder="Default is 0">
+          <label for="inputBlastFurnaceSlag">Blast Furnace Slag (0-359 kg / m^3) or (0-10%)</label>
+          <input type="text" class="form-control" id="inputBlastFurnaceSlag" name="BlastFurnaceSlag" placeholder="0">
         </div>
         <div class="form-group">
-          <label for="inputFlyAsh">Fly Ash</label>
-         <input type="text" class="form-control" id="inputFlyAsh" name="FlyAsh" placeholder="Default is 0">
+          <label for="inputFlyAsh">Fly Ash (0-200 kg / m^3) or (0-6%)</label>
+         <input type="text" class="form-control" id="inputFlyAsh" name="FlyAsh" placeholder="0">
         </div>
         <div class="form-group">
-          <label for="inputWater">Water</label>
-          <input type="text" class="form-control" id="inputWater" name="Water" placeholder="Default is 0">
+          <label for="inputWater">Water (122-247 kg / m^3) or (7.0-7.5%)</label>
+          <input type="text" class="form-control" id="inputWater" name="Water" placeholder="190">
         </div>
         <div class="form-group">
-          <label for="inputSuperplasticizer">Superplasticizer</label>
-          <input type="text" class="form-control" id="inputSuperplasticizer" name="Superplasticizer" placeholder="Default is 0">
+          <label for="inputSuperplasticizer">Superplasticizer (0-32 kg / m^3) or (0-1%)</label>
+          <input type="text" class="form-control" id="inputSuperplasticizer" name="Superplasticizer" placeholder="0">
         </div>
         <div class="form-group">
-          <label for="inputCoarseAgg">Coarse Aggregate</label>
-          <input type="text" class="form-control" id="inputCoarseAgg" name="CoarseAggregate" placeholder="Default is 0">
+          <label for="inputCoarseAgg">Coarse Aggregate (801-1145 kg / m^3) or (33-49%)</label>
+          <input type="text" class="form-control" id="inputCoarseAgg" name="CoarseAggregate" placeholder="1100">
         </div>
         <div class="form-group">
-          <label for="inputFineAgg">Fine Aggregate</label>
-          <input type="text" class="form-control" id="inputFineAgg" name="FineAggregate" placeholder="Default is 0">
+          <label for="inputFineAgg">Fine Aggregate (594-993 kg / m^3) or (28-37%)</label>
+          <input type="text" class="form-control" id="inputFineAgg" name="FineAggregate" placeholder="900">
         </div>          
         <div class="form-group">
-          <label for="inputAge">Age</label>
-          <input type="text" class="form-control" id="inputAge" name="Age" placeholder="Default is 1">
+          <label for="inputAge">Age (1-365 Days)</label>
+          <input type="text" class="form-control" id="inputAge" name="Age" placeholder="28">
         </div>
         <br>                                                                                                               
         <input type="submit" value="Submit">
@@ -124,16 +124,16 @@
       <div id="myDiv" style="float: left">
        </div>
       {%if predictionshigh%}
-      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(11, 14, 218)">{{predictionshigh}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete is High-Strength Grade at: </h3><h4 style= "color: rgb(11, 14, 218)">{{predictionshigh}} (MPa)</h4></strong>
       {%endif%}
       {%if predictionscommercial%}
-      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(5, 141, 66)">{{predictionscommercial}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete is Commercial Grade at: </h3><h4 style= "color: rgb(5, 141, 66)">{{predictionscommercial}} (MPa)</h4></strong>
       {%endif%}
        {%if predictionsresidential%}
-      <strong><h3> Your Concrete Strength(MPa) is: </h3><h4 style= "color: rgb(81, 255, 0)">{{predictionsresidential}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete is Residential Grade at: </h3><h4 style= "color: rgb(81, 255, 0)">{{predictionsresidential}} (MPa)</h4></strong>
       {%endif%}
       {%if predictionsfail%}
-      <strong><h3> Your Concrete Strength(MPa) is: </h3> <h4 style= "color: red">{{predictionsfail}}(MPa)</h4></strong>
+      <strong><h3> Your Concrete is Failing at: </h3> <h4 style= "color: red">{{predictionsfail}} (MPa)</h4></strong>
       {%endif%}
     </div>
 

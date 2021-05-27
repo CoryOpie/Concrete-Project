@@ -59,7 +59,7 @@ def send():
         if request.form["Cement"]:
           cement = request.form["Cement"]
         else:
-          cement = 0
+          cement = 380
         if request.form["BlastFurnaceSlag"]:
           blastfurnaceslag = request.form["BlastFurnaceSlag"]
         else:
@@ -71,7 +71,7 @@ def send():
         if request.form["Water"]:
           water = request.form["Water"]
         else:
-          water = 0
+          water = 190
         if request.form["Superplasticizer"]:
           superplasticizer = request.form["Superplasticizer"]
         else:
@@ -79,15 +79,15 @@ def send():
         if request.form["CoarseAggregate"]:
           coarseaggregate = request.form["CoarseAggregate"]
         else:
-          coarseaggregate = 0
+          coarseaggregate = 1100
         if request.form["FineAggregate"]:
           fineaggregate = request.form["FineAggregate"]
         else:
-          fineaggregate = 0
+          fineaggregate = 900
         if request.form["Age"]:
           age = request.form["Age"]
         else:
-          age = 1
+          age = 28
         
         
         custinput = [[cement, blastfurnaceslag, flyash, water, superplasticizer, coarseaggregate, fineaggregate, age]]
